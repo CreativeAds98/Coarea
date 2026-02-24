@@ -35,3 +35,25 @@
             menu.classList.toggle('flex');
         });
     
+
+        
+        // Scroll to Top Button
+        const scrollBtn = document.getElementById('scrollToTop');
+
+            window.addEventListener('scroll', () => {
+                // Show button after scrolling down 400px
+                if (window.scrollY > 400) {
+                    scrollBtn.classList.remove('translate-y-24', 'opacity-0');
+                    scrollBtn.classList.add('translate-y-0', 'opacity-100');
+                } else {
+                    scrollBtn.classList.add('translate-y-24', 'opacity-0');
+                    scrollBtn.classList.remove('translate-y-0', 'opacity-100');
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
