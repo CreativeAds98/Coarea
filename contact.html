@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - COAREA Coimbatore</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        blue: { 900: '#1e3a8a' },
+                        cyan: { 500: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-600 font-sans antialiased">
+
+    <!-- Navigation Bar (Transparent Initial State) -->
+    <!-- Removed bg-white, added text-white for initial visibility over video -->
+    <nav id="navbar" class="fixed w-full z-50 bg-transparent text-white py-6 top-0 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center group">
+                <div class="relative">
+                    <div class="relative h-16 w-auto flex items-center justify-center transition-all duration-500">
+                        
+                        <img src="assets/logo.png" 
+                            alt="COAREA - Coimbatore Association of Realtors" 
+                            class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-2xl">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-500"></div>
+                    </div>
+                </div>
+            </a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <!-- Removed text-slate-600 to allow inheritance from navbar parent -->
+                <a href="about.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    About Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="team.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Members
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#benefits" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Benefits
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#advocacy" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Advocacy
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <button id="nav-btn" class="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg transition-all hover:-translate-y-0.5">
+                    Join Us
+                </button>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <button id="mobile-menu-btn" class="md:hidden text-current focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white text-slate-700 border-t border-slate-100 p-6 shadow-xl flex-col gap-4">
+            <a href="#about-us" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">About Us</a>
+            <a href="#membership" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Membership</a>
+            <a href="#benefits" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Benefits</a>
+            <a href="#advocacy" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Advocacy</a>
+            <button class="bg-cyan-500 text-white w-full py-3 rounded-lg font-bold mt-4">Member Login</button>
+        </div>
+    </nav>
+
+    
+        <header class="pt-32 pb-16 bg-blue-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <path d="M0 100 L100 0" stroke="white" stroke-width="0.2"/>
+                    <path d="M0 50 L50 0" stroke="white" stroke-width="0.1"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+                <span class="text-cyan-400 font-bold text-xs uppercase tracking-[0.5em] mb-4 block">
+                    Get in Touch
+                </span>
+                
+                <h1 class="text-4xl lg:text-6xl font-extrabold mb-4 tracking-tight">
+                    Connect with <span class="text-cyan-400">COAREA</span>
+                </h1>
+                
+                <p class="text-blue-100 max-w-2xl mx-auto opacity-80 leading-relaxed font-light">
+                    Have questions about membership, property disputes, or local regulations? 
+                    Our council is here to help you navigate the Coimbatore real estate landscape.
+                </p>
+            </div>
+        </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-5 space-y-12">
+                    <div>
+                        <h2 class="text-3xl font-bold text-blue-900 mb-8">Official Secretariat</h2>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-12 h-12 rounded-2xl bg-cyan-500 flex items-center justify-center shrink-0 shadow-lg shadow-cyan-500/20">
+                                    <i data-lucide="map-pin" class="text-white w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Our Address</h4>
+                                    <p class="text-slate-500 mt-1 leading-relaxed">7th Floor, Chamber Towers, Avinashi Road,<br>Coimbatore - 641018</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-12 h-12 rounded-2xl bg-blue-900 flex items-center justify-center shrink-0 shadow-lg shadow-blue-900/20">
+                                    <i data-lucide="phone" class="text-white w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Direct Contact</h4>
+                                    <p class="text-slate-500 mt-1 leading-relaxed">Office: +91 422 222 1234<br>Member Helpline: +91 98765 43210</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-6 group">
+                                <div class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center shrink-0 shadow-lg shadow-slate-900/20">
+                                    <i data-lucide="mail" class="text-white w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg">Email Inquiries</h4>
+                                    <p class="text-slate-500 mt-1 leading-relaxed">info@coarea.in<br>admin@coarea.in</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 bg-blue-50 rounded-[2rem] border border-blue-100">
+                        <h4 class="font-bold text-blue-900 mb-4">Follow Our Updates</h4>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-blue-900 hover:bg-cyan-500 hover:text-white transition-all shadow-sm"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-blue-900 hover:bg-cyan-500 hover:text-white transition-all shadow-sm"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-blue-900 hover:bg-cyan-500 hover:text-white transition-all shadow-sm"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 lg:p-12 rounded-[3rem] shadow-xl shadow-blue-900/5 border border-slate-100">
+                        <form action="#" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Full Name</label>
+                                    <input type="text" placeholder="John Doe" class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all">
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Address</label>
+                                    <input type="email" placeholder="john@example.com" class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all">
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Inquiry Type</label>
+                                <select class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all appearance-none">
+                                    <option>General Inquiry</option>
+                                    <option>New Membership</option>
+                                    <option>Legal/RERA Support</option>
+                                    <option>Grievance Redressal</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-slate-400 uppercase tracking-widest">Your Message</label>
+                                <textarea rows="5" placeholder="How can we assist you today?" class="w-full px-5 py-4 bg-slate-50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all"></textarea>
+                            </div>
+                            <button class="w-full bg-blue-900 text-white font-bold py-5 rounded-xl hover:bg-cyan-500 transition-all shadow-lg shadow-blue-900/10 flex items-center justify-center gap-3">
+                                <i data-lucide="send" class="w-5 h-5"></i>
+                                Submit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section class="pb-24">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-900/10 border-8 border-white h-[400px] relative">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.317451050!2d76.9585!3d11.0168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDAxJzYwLjUiTiA3NsKwNTcnMzAuNiJF!5e0!3m2!1sen!2sin!4v1710000000000" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-slate-100 hidden md:block">
+                    <p class="text-[10px] font-black text-cyan-600 uppercase tracking-[0.2em] mb-1">Visit Our Office</p>
+                    <p class="text-sm font-bold text-blue-900 leading-tight">Chamber Towers, Avinashi Road</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col items-center justify-center space-y-6">
+                
+                <img src="assets/logo.png" alt="COAREA" class="h-8 w-auto">
+                
+                <div class="text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">
+                        &copy; 2026 COAREA. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script-->
+    <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
+</body>
+</html>
