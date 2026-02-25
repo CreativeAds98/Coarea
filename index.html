@@ -57,9 +57,77 @@
         html {
             scroll-padding-top: 80px;
         }
+
+
+
+
+            /* Preloader Styles */
+/* Custom Counter-Rotation for the Symbol */
+@keyframes logo-spin-reverse {
+    from { transform: rotate(360deg) scale(1); }
+    to { transform: rotate(0deg) scale(1); }
+}
+
+#loader-logo {
+    /* Speed up rotation from 12s to 6s */
+    animation: logo-spin-reverse 6s linear infinite;
+    filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));
+}
+
+.animate-\[spin_15s_linear_infinite\] {
+    /* Target the outer ring and speed it up from 15s to 8s */
+    animation: spin 8s linear infinite !important;
+}
+/* Page reveal effect when loading completes */
+.reveal-site {
+    transform: scale(1.1);
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Prevent interaction and scrolling during load */
+body.is-loading {
+    overflow: hidden;
+    height: 100vh;
+}
+
     </style>
 </head>
 <body class="bg-slate-50 text-slate-600 font-sans antialiased">
+
+        <!-- Preloader-->
+
+<div id="preloader" class="fixed inset-0 z-[9999] bg-[#050b1a] flex flex-col items-center justify-center transition-all duration-1000 overflow-hidden">
+    
+    <div class="absolute inset-0 z-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center">
+        <div class="relative w-32 h-32 mb-12">
+            <div class="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/20 animate-[spin_15s_linear_infinite] scale-150"></div>
+            
+            <div class="absolute inset-0 rounded-full border border-white/5 animate-ping opacity-20"></div>
+            
+            <img src="assets/favicon.PNG" id="loader-logo" class="w-full h-full object-contain relative z-20" alt="COAREA Symbol">
+        </div>
+
+        <div class="space-y-4 text-center">
+            <h2 class="text-white font-serif italic text-2xl tracking-wide opacity-0 translate-y-4 transition-all duration-700" id="loader-title">
+                Apex Standards.
+            </h2>
+            <div class="flex flex-col items-center gap-3">
+                <div class="h-[2px] w-48 bg-white/5 rounded-full overflow-hidden relative">
+                    <div id="progress-line" class="absolute top-0 left-0 h-full bg-gradient-to-r from-cyan-500 to-blue-600 w-0 transition-all duration-300"></div>
+                </div>
+                <p class="text-[9px] font-black text-cyan-500/60 uppercase tracking-[0.6em]" id="loader-status">
+                    Establishing Connection
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
 
     <!-- Navigation Bar (Transparent Initial State) -->
     <!-- Removed bg-white, added text-white for initial visibility over video -->
@@ -704,5 +772,46 @@
 
  <!-- script -->
 <script src="script.js"></script>
+<script>
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const progress = document.getElementById('progress-line');
+    const title = document.getElementById('loader-title');
+    const status = document.getElementById('loader-status');
+    
+    let width = 0;
+    // Faster interval for a "high-performance" feel
+    const loadingInterval = setInterval(() => {
+        if (width >= 100) {
+            clearInterval(loadingInterval);
+            finishLoading();
+        } else {
+            // Larger random increments (15-25% at a time)
+            width += Math.floor(Math.random() * 20) + 15; 
+            if (width > 100) width = 100;
+            progress.style.width = width + '%';
+
+            // Text transitions happen faster
+            if (width > 30) {
+                status.innerText = "Syncing Database";
+                title.classList.remove('opacity-0', 'translate-y-4');
+                title.classList.add('opacity-100', 'translate-y-0');
+            }
+            if (width > 70) {
+                status.innerText = "Apex Ready";
+            }
+        }
+    }, 80); // Reduced from 120ms to 80ms
+
+    function finishLoading() {
+        // Reduced final delay for instant access
+        setTimeout(() => {
+            preloader.style.transition = "all 0.6s cubic-bezier(0.22, 1, 0.36, 1)";
+            preloader.classList.add('reveal-site');
+            document.body.classList.remove('is-loading');
+        }, 300); // Reduced from 600ms to 300ms
+    }
+});
+</script>
 </body>
 </html>
