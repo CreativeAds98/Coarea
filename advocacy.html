@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacy - COAREA Coimbatore</title>
+       <!--favicon-->
+    <link rel="icon" href="assets/favicon.PNG" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        blue: { 900: '#1e3a8a' },
+                        cyan: { 500: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-600 font-sans antialiased">
+
+    <!-- Navigation Bar (Transparent Initial State) -->
+    <!-- Removed bg-white, added text-white for initial visibility over video -->
+    <nav id="navbar" class="fixed w-full z-50 bg-transparent text-white py-6 top-0 transition-all duration-300">
+        <div class="container mx-auto px-6 lg:px-12 flex justify-between items-center">
+            
+            <!-- Logo Area -->
+            <a href="index.html" class="flex items-center group">
+                <div class="relative">
+                    <div class="relative h-16 w-auto flex items-center justify-center transition-all duration-500">
+                        
+                        <img src="assets/logo.png" 
+                            alt="COAREA - Coimbatore Association of Realtors" 
+                            class="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-2xl">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-500"></div>
+                    </div>
+                </div>
+            </a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <!-- Removed text-slate-600 to allow inheritance from navbar parent -->
+                <a href="about.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    About Us
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="team.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Members
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="benefits.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Benefits
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="advocacy.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Advocacy
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="contact.html" class="text-sm font-medium hover:text-cyan-400 transition-colors relative group">
+                    Contact
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <button id="nav-btn" class="bg-cyan-500 hover:bg-cyan-400 text-white px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg transition-all hover:-translate-y-0.5">
+                    Join Us
+                </button>
+            </div>
+
+            <!-- Mobile Menu Icon -->
+            <button id="mobile-menu-btn" class="md:hidden text-current focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white text-slate-700 border-t border-slate-100 p-6 shadow-xl flex-col gap-4">
+            <a href="#about-us" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">About Us</a>
+            <a href="#membership" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Membership</a>
+            <a href="#benefits" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Benefits</a>
+            <a href="#advocacy" class="text-lg font-semibold hover:text-cyan-600 pl-2 border-l-4 border-transparent hover:border-cyan-400">Advocacy</a>
+            <button class="bg-cyan-500 text-white w-full py-3 rounded-lg font-bold mt-4">Member Login</button>
+        </div>
+    </nav>
+
+    
+
+    
+            <section class="py-32 bg-blue-900 relative overflow-hidden" id="benefits">
+                <div class="absolute inset-0 flex items-center justify-center opacity-[0.05] pointer-events-none">
+                    <span class="text-[12vw] font-black uppercase tracking-tighter text-white">Advocacy</span>
+                </div>
+
+                <div class="container mx-auto px-6 relative z-10 text-center">
+                    <div class="flex items-center justify-center gap-3 mb-8">
+                        <span class="h-px w-8 bg-cyan-500"></span>
+                        <p class="text-cyan-400 font-bold text-[10px] uppercase tracking-[0.5em]">Advocacy</p>
+                        <span class="h-px w-8 bg-cyan-500"></span>
+                    </div>
+
+                    <h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+                        Coming Soon<br/> 
+                        <span class="font-serif italic font-medium text-blue-200/50">!!!!!</span>
+                    </h2>
+
+
+                    
+                </div>
+            </section>
+
+
+
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col items-center justify-center space-y-6">
+                
+                <img src="assets/logo.png" alt="COAREA" class="h-8 w-auto">
+                
+                <div class="text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em]">
+                        &copy; 2026 COAREA. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <button id="scrollToTop" class="fixed bottom-8 right-8 z-[60] w-12 h-12 bg-cyan-500 text-white rounded-xl shadow-2xl flex items-center justify-center translate-y-24 opacity-0 transition-all duration-500 hover:bg-blue-900 hover:-translate-y-1 active:scale-95 group">
+    <i data-lucide="arrow-up" class="w-6 h-6 group-hover:animate-bounce"></i>
+    </button>
+
+    <!-- Script-->
+    <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
+</body>
+</html>
