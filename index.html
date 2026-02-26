@@ -62,45 +62,44 @@
 
 
             /* Preloader Styles */
-                @keyframes logo-fast {
-                    from { transform: rotate(360deg); }
-                    to { transform: rotate(0deg); }
-                }
+        @keyframes slow-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
 
-                /* Sharp reveal for instant access */
-                .reveal-complete {
-                    opacity: 0 !important;
-                    visibility: hidden !important;
-                    transform: scale(1.1);
-                }
+        #loader-icon {
+            /* Perfectly timed 3-second rotation */
+            animation: slow-rotate 3s linear infinite;
+            filter: drop-shadow(0 0 10px rgba(6, 182, 212, 0.3));
+        }
 
-                body.is-loading {
-                    overflow: hidden;
-                }
+        /* State to hide scrollbar while loading */
+        body.is-loading {
+            overflow: hidden;
+        }
+
+        /* Fade out class */
+        .loader-hide {
+            opacity: 0;
+            pointer-events: none;
+        }
 
     </style>
 </head>
 <body class="bg-slate-50 text-slate-600 font-sans antialiased">
 
         <!-- Preloader-->
-        <div id="preloader" class="fixed inset-0 z-[9999] bg-[#050b1a] flex items-center justify-center transition-all duration-300">
-            
-            <div class="absolute inset-0">
-                <div class="absolute inset-0 bg-blue-600/5 animate-pulse"></div>
-                <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
-            </div>
-
-            <div class="relative z-10 flex flex-col items-center">
-                <div class="relative w-24 h-24 mb-10">
-                    <div class="absolute inset-0 rounded-full border border-cyan-500/30 animate-[spin_1s_linear_infinite] scale-125"></div>
-                    <img src="assets/favicon.PNG" id="loader-symbol" class="w-full h-full object-contain animate-[logo-fast_0.8s_linear_infinite]" alt="COAREA">
-                </div>
-
-                <div class="w-40 h-[2px] bg-white/10 rounded-full overflow-hidden">
-                    <div id="progress-bar" class="h-full bg-cyan-500 w-0 transition-all duration-150 ease-out"></div>
+            <div id="preloader" class="fixed inset-0 z-[9999] bg-[#050b1a] flex items-center justify-center transition-opacity duration-700">
+                <div class="relative flex flex-col items-center">
+                    <div class="w-24 h-24 mb-8">
+                        <img src="assets/favicon.PNG" id="loader-icon" class="w-full h-full object-contain" alt="COAREA">
+                    </div>
+                    
+                    <div class="w-32 h-[1px] bg-white/10 rounded-full overflow-hidden">
+                        <div id="loader-bar" class="h-full bg-cyan-500 w-0 transition-all duration-[3000ms] ease-linear"></div>
+                    </div>
                 </div>
             </div>
-        </div>
     <!-- Navigation Bar (Transparent Initial State) -->
     <!-- Removed bg-white, added text-white for initial visibility over video -->
     <nav id="navbar" class="fixed w-full z-50 bg-transparent text-white py-6 top-0 transition-all duration-300">
@@ -746,35 +745,29 @@
  <!-- script -->
 <script src="script.js"></script>
 <script>
-window.addEventListener('load', () => {
+document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById('preloader');
-    const progressBar = document.getElementById('progress-bar');
-    let progress = 0;
+    const loaderBar = document.getElementById('loader-bar');
+    
+    // Lock scroll
+    document.body.classList.add('is-loading');
 
-    // High-frequency update: every 30ms
-    const interval = setInterval(() => {
-        // Aggressive jumps to ensure speed
-        progress += Math.floor(Math.random() * 15) + 10;
+    // Start filling the bar immediately
+    setTimeout(() => {
+        loaderBar.style.width = '100%';
+    }, 50);
+
+    // After exactly 3 seconds, fade out the preloader
+    setTimeout(() => {
+        preloader.classList.add('loader-hide');
+        document.body.classList.remove('is-loading');
         
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            
-            // Execute the reveal immediately
-            setTimeout(() => {
-                preloader.classList.add('reveal-complete');
-                document.body.classList.remove('is-loading');
-                
-                // Remove from DOM to free resources
-                setTimeout(() => { preloader.remove(); }, 400);
-            }, 100); 
-        }
-        progressBar.style.width = progress + '%';
-    }, 30);
+        // Remove from DOM after transition
+        setTimeout(() => {
+            preloader.remove();
+        }, 700);
+    }, 3000);
 });
-
-// Lock scrolling immediately
-document.body.classList.add('is-loading');
 </script>
 </body>
 </html>
