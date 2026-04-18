@@ -84,6 +84,11 @@
             pointer-events: none;
         }
 
+    /* Global rule to justify all paragraphs */
+        p {
+            text-align: justify;
+        }
+
     </style>
 </head>
 <body class="bg-slate-50 text-slate-600 font-sans antialiased">
@@ -232,9 +237,13 @@
                     <p class="text-blue-100 leading-relaxed mb-8">
                         Being a Coarea member is a badge of honor. It signals to your clients that you adhere to a strict Code of Ethics and professional standards.
                     </p>
-                    <button class="bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50 transition-colors shadow-lg">
-                        Download Application Form
-                    </button>
+                    <a 
+                    href="assets/pdf/application.pdf" 
+                    download="Application_Form.pdf"
+                    class="inline-block bg-white text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50 transition-colors shadow-lg"
+                    >
+                    Download Application Form
+                    </a>
                 </div>
                 <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="bg-blue-800/50 p-6 rounded-xl border border-blue-700 hover:bg-blue-800 transition-colors">
@@ -369,7 +378,7 @@
                     
                     <div class="mt-10 flex gap-4">
                         <button class="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-900 transition-all shadow-lg shadow-slate-900/20">View Bylaws</button>
-                        <button class="px-8 py-3 rounded-xl font-bold text-slate-600 border border-slate-200 hover:border-cyan-500 hover:text-cyan-600 transition-all">Member Benefits</button>
+                        <a href="benefits.html" class="inline-block px-8 py-3 rounded-xl font-bold text-slate-600 border border-slate-200 hover:border-cyan-500 hover:text-cyan-600 transition-all">Member Benefits</a>
                     </div>
                 </div>
             </div>
@@ -499,9 +508,11 @@
                         <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i> Private Deal-Sharing Groups
                     </li>
                 </ul>
-                <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
-                    Apply for Membership
-                </button>
+                <a href="contact.html" class="block">
+                    <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                        Enquiry for Membership
+                    </button>
+                </a>
             </div>
 
             <div class="bg-white p-10 rounded-[2rem] shadow-2xl shadow-blue-950/50 group">
@@ -520,9 +531,11 @@
                         <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-900"></i> Professional Mediation Support
                     </li>
                 </ul>
-                <button class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
-                    Search Member Directory
-                </button>
+                <a href="team.html" class="block">
+                    <button class="w-full bg-blue-900 hover:bg-slate-800 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-1">
+                        Search Member Directory
+                    </button>
+                </a>
             </div>
         </div>
     </div>

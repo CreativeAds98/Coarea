@@ -23,6 +23,12 @@
             }
         }
     </script>
+    <style>
+    /* Global rule to justify all paragraphs */
+        p {
+            text-align: justify;
+        }
+    </style>
 </head>
 <body class="bg-slate-50 text-slate-600 font-sans antialiased">
 
@@ -89,30 +95,225 @@
         </div>
     </nav>
 
+<!-- Hero Section -->
+    <header class="relative pt-40 pb-24 overflow-hidden bg-slate-900 text-white">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-0 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-[80px]"></div>
+        
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-sm">
+                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                <span class="text-white text-xs font-bold uppercase tracking-widest">Why Join Coarea?</span>
+            </span>
+            
+            <h1 class="text-5xl lg:text-7xl font-serif font-bold mb-6 leading-tight drop-shadow-lg">
+                Empowering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-yellow-400">Real Estate</span> <br> Professionals
+            </h1>
+            
+            <p class="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed font-light">
+                At COAREA, we are committed to empowering real estate professionals—brokers, agents, and consultants—by providing the right platform, support, and opportunities to grow and succeed.
+            </p>
+        </div>
+    </header>
 
-            <section class="py-32 bg-blue-900 relative overflow-hidden" id="benefits">
-                <div class="absolute inset-0 flex items-center justify-center opacity-[0.05] pointer-events-none">
-                    <span class="text-[12vw] font-black uppercase tracking-tighter text-white">Benefits</span>
-                </div>
-
-                <div class="container mx-auto px-6 relative z-10 text-center">
-                    <div class="flex items-center justify-center gap-3 mb-8">
-                        <span class="h-px w-8 bg-cyan-500"></span>
-                        <p class="text-cyan-400 font-bold text-[10px] uppercase tracking-[0.5em]">Benefits</p>
-                        <span class="h-px w-8 bg-cyan-500"></span>
+    <!-- Main Benefits Grid -->
+    <section class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 lg:px-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Benefit 1: Representation -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-blue-50 text-blue-900 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-900 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="landmark" class="w-7 h-7"></i>
                     </div>
-
-                    <h2 class="text-4xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
-                        Coming Soon<br/> 
-                        <span class="font-serif italic font-medium text-blue-200/50">!!!!!</span>
-                    </h2>
-
-
-                    
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Strong Industry Representation</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        We serve as a unified voice for real estate brokers, representing our members’ interests with:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Government bodies</li>
+                        <li>Tamil Nadu Real Estate Regulatory Authority (TNRERA)</li>
+                        <li>Relevant local authorities</li>
+                    </ul>
+                    <p class="text-slate-500 text-xs mt-4 italic">
+                        We actively work to address challenges such as compliance burdens, penalties, and broker rights.
+                    </p>
                 </div>
-            </section>
 
+                <!-- Benefit 2: Networking -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-cyan-50 text-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan-500 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="network" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Networking & Business</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        We create opportunities for meaningful connections and collaborations through:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Regular “Let’s Connect” events with leading developers</li>
+                        <li>A strong network across Coimbatore, Tirupur, Nilgiris, Erode, and Salem</li>
+                    </ul>
+                    <p class="text-slate-500 text-xs mt-4 italic">
+                        Gain access to collaborations, partnerships, and shared business opportunities.
+                    </p>
+                </div>
 
+                <!-- Benefit 3: Learning -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-yellow-50 text-yellow-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="book-open" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Learning & Skill Development</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        We enable continuous growth through curated training sessions on:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Real estate laws and RERA compliance</li>
+                        <li>Social media and digital marketing</li>
+                        <li>Latest industry trends and PropTech</li>
+                    </ul>
+                    <p class="text-slate-500 text-xs mt-4 italic">
+                        Ensuring our members remain competitive, informed, and future-ready.
+                    </p>
+                </div>
+
+                <!-- Benefit 4: NAR India (Featured / Spans 2 cols on tablet, 1 on desktop) -->
+                <div class="bg-gradient-to-br from-blue-900 to-blue-950 p-8 rounded-3xl shadow-xl hover:-translate-y-2 transition-all duration-300 group text-white md:col-span-2 lg:col-span-1 relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 text-white/10 group-hover:text-white/20 transition-colors">
+                        <i data-lucide="globe-2" class="w-48 h-48"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 backdrop-blur-md text-cyan-400 rounded-2xl flex items-center justify-center mb-6">
+                            <i data-lucide="globe" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Membership with NAR India</h3>
+                        <p class="text-blue-100 text-sm mb-4 leading-relaxed">
+                            As a COAREA member, you are automatically part of the National Association of Realtors India, gaining:
+                        </p>
+                        <ul class="text-sm text-blue-50 font-medium space-y-2 mb-4">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i> National-level exposure</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i> Wider networking opportunities</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400 shrink-0 mt-0.5"></i> Recognition across the Indian real estate ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Benefit 5: Credibility -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Credibility & Trust</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Being a COAREA member enhances your professional credibility immediately. 
+                        <br><br>
+                        Our strict commitment to ethical standards and disciplined practices builds unwavering trust among your clients, developers, and industry stakeholders.
+                    </p>
+                </div>
+
+                <!-- Benefit 6: Standardized -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="bar-chart-horizontal" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Standardized Practices</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        We promote structured and transparent business practices, avoiding market chaos. This includes:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Defined commission frameworks for buying, selling, and rentals</li>
+                        <li>Consistency and clarity in all documentation and transactions</li>
+                    </ul>
+                </div>
+
+                <!-- Benefit 7: Ethical -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-slate-100 text-slate-700 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="scale" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Ethical Framework</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        Our members adhere to a strong code of ethics, which ensures:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Honest and transparent dealings</li>
+                        <li>Strict policies against misrepresentation</li>
+                        <li>Fair cooperation within the broker community</li>
+                    </ul>
+                    <p class="text-slate-500 text-xs mt-4 italic">
+                        This strengthens your long-term reputation and reliability.
+                    </p>
+                </div>
+
+                <!-- Benefit 8: Support -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-red-50 text-red-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="life-buoy" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Strong Support System</h3>
+                    <p class="text-slate-600 text-sm mb-4 leading-relaxed">
+                        We stand by our members in times of conflict. We actively help resolve:
+                    </p>
+                    <ul class="benefit-list text-sm text-slate-600 font-medium">
+                        <li>Brokerage and commission disputes</li>
+                        <li>Unforeseen industry-related challenges</li>
+                    </ul>
+                    <p class="text-slate-500 text-sm mt-4 font-semibold text-blue-900">
+                        At COAREA, you are part of a supportive community—you never work alone.
+                    </p>
+                </div>
+
+                <!-- Benefit 9: Community -->
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-14 h-14 bg-orange-50 text-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
+                        <i data-lucide="users" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">Powerful Industry Community</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Connect with some of the most experienced and respected professionals in the Coimbatore region. 
+                        <br><br>
+                        Learn, grow, and collaborate with peers who bring decades of real estate expertise to the table. Expand your horizons beyond individual limits.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Promise Banner -->
+    <section class="py-16 bg-gradient-to-r from-cyan-500 to-blue-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <div class="inline-block p-4 bg-white/20 rounded-full mb-6 backdrop-blur-sm">
+                <i data-lucide="heart-handshake" class="w-10 h-10 text-yellow-300"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Our Promise</h2>
+            <p class="text-xl md:text-2xl font-light max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+                "At COAREA, we are more than an association—we are your <span class="font-bold text-yellow-300">voice</span>, your <span class="font-bold text-yellow-300">network</span>, and your <span class="font-bold text-yellow-300">growth partner</span> in the real estate industry."
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-slate-900 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to elevate your career?</h2>
+            <p class="text-slate-400 mb-10 max-w-xl mx-auto">
+                Join the ranks of Coimbatore's most trusted real estate professionals today. Experience the benefits of a united, ethical, and powerful network.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:-translate-y-1">
+                    Apply for Membership Now
+                </button>
+                <button class="bg-transparent border border-slate-600 text-white hover:bg-slate-800 px-8 py-4 rounded-xl font-bold transition-all">
+                    Contact Us for Details
+                </button>
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-white py-12 border-t border-slate-100">
         <div class="container mx-auto px-6 lg:px-12">
