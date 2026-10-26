@@ -184,21 +184,21 @@
             <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
         </div>
 
-        <div class="container mx-auto px-6 lg:px-12 relative z-10 pt-20">
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 pt-32 pb-16 md:pt-20 md:pb-0">
             <div class="max-w-4xl mx-auto text-center">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-8 backdrop-blur-md shadow-sm">
                     <i data-lucide="shield-check" class="w-4 h-4 text-cyan-300"></i>
                     <span class="text-white text-xs font-bold uppercase tracking-wide">City Association of NAR India</span>
                 </div>
 
-                <h1 class="text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-xl">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight drop-shadow-xl">
                     The Unified Voice of <br>
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                         Coimbatore Realtors
                     </span>
                 </h1>
 
-                <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-medium drop-shadow-md">
+                <p class="text-slate-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed font-medium drop-shadow-md">
                     Empowering real estate professionals through ethics, education, and advocacy. We set the standard for trust in the industry.
                 </p>
 
@@ -217,7 +217,7 @@
                     </button>
                 </div>--> 
 
-                <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm font-bold text-white">
+                <div class="mt-8 md:mt-12 flex flex-wrap justify-center gap-4 sm:gap-8 text-sm font-bold text-white">
                     <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full border border-white/20 shadow-sm backdrop-blur-md">
                         <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                         <span>15+ Years of Service</span>
@@ -227,14 +227,29 @@
                         <span>50+ Certified Members</span>
                     </div>
                 </div>
+
+                <!-- Mobile Only Official Member Association Badge -->
+                <div class="mt-8 md:hidden flex justify-center">
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl flex flex-col items-center gap-2 shadow-xl">
+                        <img src="assets/NAI.jpeg" 
+                            alt="NAR India Logo" 
+                            class="h-14 w-auto rounded-lg">
+                        
+                        <div class="text-center">
+                            <span class="block text-[10px] text-cyan-300 font-bold tracking-[0.2em] uppercase leading-none">Official</span>
+                            <span class="block text-[11px] text-white font-medium tracking-wide">Member Association</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-       <div class="absolute top-4 right-4 md:top-16 md:right-6 z-20 scale-75 md:scale-100">
+       <!-- Desktop Floating Official Member Association Badge -->
+       <div class="hidden md:flex absolute md:top-32 lg:top-36 md:right-6 lg:right-12 z-20">
             <div class="bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl flex flex-col items-center gap-2 shadow-2xl transform hover:scale-105 transition-all duration-500 group">
                 <img src="assets/NAI.jpeg" 
                     alt="NAR India Logo" 
-                    class="h-16 w-auto">
+                    class="h-16 w-auto rounded-lg">
                 
                 <div class="text-center">
                     <span class="block text-[10px] text-cyan-300 font-bold tracking-[0.2em] uppercase leading-none">Official</span>
