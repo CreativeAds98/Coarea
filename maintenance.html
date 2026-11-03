@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance | COAREA - Coimbatore Association of Realtors</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.PNG" type="image/x-icon">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        blue: {
+                            900: '#1e3a8a',
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                        },
+                        yellow: {
+                            400: '#facc15',
+                        }
+                    },
+                    animation: {
+                        'spin-slow': 'spin 12s linear infinite',
+                        'reverse-spin': 'reverseSpin 16s linear infinite',
+                    },
+                    keyframes: {
+                        reverseSpin: {
+                            from: { transform: 'rotate(360deg)' },
+                            to: { transform: 'rotate(0deg)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#050b1a] text-slate-300 font-sans min-h-screen flex flex-col justify-between relative overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+    <!-- Background Decorative Elements -->
+    <div class="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+    <div class="fixed -top-40 -left-40 w-96 h-96 bg-cyan-500/20 blur-[130px] rounded-full pointer-events-none"></div>
+    <div class="fixed -bottom-40 -right-40 w-[500px] h-[500px] bg-blue-600/15 blur-[150px] rounded-full pointer-events-none"></div>
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 blur-[160px] rounded-full pointer-events-none"></div>
+
+    <!-- Header / Brand -->
+    <header class="relative z-10 w-full py-8 px-6 lg:px-12 border-b border-white/5 bg-slate-900/40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="COAREA Logo" class="h-10 md:h-12 w-auto object-contain brightness-110">
+            </a>
+            <div class="hidden sm:flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-cyan-400 bg-cyan-500/10 border border-cyan-500/20 px-3.5 py-1.5 rounded-full">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                Member Association • NAR-India
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="relative z-10 flex-1 flex items-center justify-center px-6 py-12 md:py-16">
+        <div class="max-w-2xl mx-auto text-center">
+
+            <!-- Maintenance Status Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs sm:text-sm font-semibold tracking-wide mb-8 shadow-inner">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
+                </span>
+                <span>Scheduled System Maintenance</span>
+            </div>
+
+            <!-- Animated Maintenance Graphic -->
+            <div class="relative w-28 h-28 sm:w-32 sm:h-32 mx-auto mb-8 flex items-center justify-center">
+                <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-cyan-500/20 to-blue-600/20 blur-xl"></div>
+                <div class="relative w-full h-full rounded-3xl bg-slate-900/80 border border-white/10 shadow-2xl flex items-center justify-center backdrop-blur-xl">
+                    <!-- Spinning Outer Cog -->
+                    <div class="absolute animate-spin-slow opacity-25 text-cyan-400">
+                        <i data-lucide="settings" class="w-20 h-20"></i>
+                    </div>
+                    <!-- Counter-spinning Inner Cog -->
+                    <div class="absolute animate-reverse-spin opacity-35 text-amber-400">
+                        <i data-lucide="settings" class="w-12 h-12"></i>
+                    </div>
+                    <!-- Center Wrench / Tool Icon -->
+                    <div class="relative z-10 text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+                        <i data-lucide="wrench" class="w-10 h-10 sm:w-11 sm:h-11"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Headings -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                We're Upgrading Our <br class="hidden sm:inline">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-blue-400">Digital Experience.</span>
+            </h1>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-10">
+                The COAREA portal is currently undergoing scheduled maintenance and platform upgrades. We will be back online shortly with improved features and performance.
+            </p>
+
+            <!-- Status Box / Progress -->
+            <div class="p-5 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md max-w-lg mx-auto mb-10 text-left">
+                <div class="flex items-center justify-between text-xs sm:text-sm font-semibold mb-2.5">
+                    <span class="text-slate-300 flex items-center gap-2">
+                        <i data-lucide="activity" class="w-4 h-4 text-cyan-400"></i>
+                        Upgrade Status
+                    </span>
+                    <span class="text-cyan-400 font-bold">In Progress</span>
+                </div>
+                <!-- Progress Bar -->
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-3/4 animate-pulse"></div>
+                </div>
+                <div class="flex items-center justify-between text-[11px] sm:text-xs text-slate-400 mt-2.5">
+                    <span>Database optimizations & security updates</span>
+                    <span class="text-slate-300 font-medium">Estimated: Shortly</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+                <button onclick="window.location.reload()" 
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    <i data-lucide="rotate-cw" class="w-4 h-4"></i>
+                    <span>Check Again / Refresh</span>
+                </button>
+                <a href="https://wa.me/+919159061666?text=Hello%20COAREA%2C%20I%20have%20an%20urgent%20enquiry%20while%20the%20website%20is%20under%20maintenance." 
+                    target="_blank" rel="noopener noreferrer"
+                    class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold text-sm backdrop-blur-md hover:border-cyan-400 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-green-400"></i>
+                    <span>Urgent WhatsApp Support</span>
+                </a>
+            </div>
+
+            <!-- Direct Contact Grid -->
+            <div class="pt-8 border-t border-white/10">
+                <p class="text-xs uppercase tracking-widest text-slate-400 font-semibold mb-6">Need Immediate Assistance?</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto text-left">
+                    <a href="tel:+919159061666" class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition-colors group">
+                        <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-[11px] text-slate-400 font-medium">Direct Secretariat</div>
+                            <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">+91 91590 61666</div>
+                        </div>
+                    </a>
+
+                    <a href="mailto:secretary@coarea.in" class="flex items-center gap-3.5 p-3.5 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 transition-colors group">
+                        <div class="w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <div class="text-[11px] text-slate-400 font-medium">Official Inquiries</div>
+                            <div class="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">secretary@coarea.in</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 w-full py-6 px-6 border-t border-white/5 bg-slate-900/60 backdrop-blur-md text-center text-xs text-slate-400">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© 2026 Coimbatore Association of Realtors (COAREA). All rights reserved.</p>
+            <p class="text-slate-500">Affiliated with National Association of Realtors - India (NAR-INDIA)</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
